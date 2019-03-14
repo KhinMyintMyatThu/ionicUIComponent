@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
     <ion-title>
       Ionic Blank
     </ion-title>
@@ -7,6 +10,15 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <ion-button (click)="presentAlert()">Alert Action</ion-button>
+  <ion-button color="success" size="large" shape="round" (click)="presentLoadingWithOptions()">Loading</ion-button>
+  <ion-item> 
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="MMM DD, YY" picker-format="MMMM YYYY" min="2015" max="2070-10-31"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">telephone</ion-label>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
 </ion-content>
